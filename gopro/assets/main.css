@@ -66,6 +66,16 @@ nav ul li a:hover {
     background-color: #029CE2;
     padding: 30px;
 }
+nav ul li a.active {
+    color: #fff;
+    background-color: #029CE2;
+    padding: 25px;
+}
+nav ul li a.active:hover {
+    color: #fff;
+    background-color: #029CE2;
+    padding: 30px;
+}
 
 /* Heading Box */
 div.heading-box {
