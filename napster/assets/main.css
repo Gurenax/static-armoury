@@ -1,0 +1,150 @@
+html {
+    font-size: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";    
+}
+
+/*
+body {
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+/* Header */
+div.header {
+    width:100%;
+}
+
+/* Logo */
+div.logo {
+    text-align: center;
+    width: 300px;
+    background: url('napster-corporate-logo.svg');
+    background-repeat: no-repeat;
+    height: 90px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.napster-logo:hover {
+    -webkit-animation: swing-logo 1s infinite;
+    animation: swing-logo 1s infinite;
+    z-index: 1;
+}
+
+@keyframes swing-logo {
+    0%   { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Navigation */
+nav {
+    width: 100%;
+    margin: 0 auto;
+    min-width: 500px;
+    /*padding: 50px 0;*/
+    /*box-shadow: 0px 5px 0px #dedede;*/
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;   
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #025BAA;
+    font-weight: 800;
+    text-transform: uppercase;
+    /*margin: 0 10px;*/
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+    transition: all 0.2s;
+}
+nav ul li a:hover {
+    color: #DEEEE1;
+}
+
+nav.circle ul li a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+nav.circle ul li a:after {
+    display: block;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '.';
+    color: transparent;
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: transparent;
+}
+nav.circle ul li a:hover:after {
+    -webkit-animation: circle 0.7s ease-in forwards;
+}
+
+/* Keyframes */
+@-webkit-keyframes circle {
+    0% {
+        width: 1px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        height: 1px;
+        z-index: -1;
+        background: #025BAA;
+        border-radius: 100%;
+    }
+    100% {
+        background: #65BB47;
+        height: 5000%;
+        width: 5000%;
+        z-index: -1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 0;
+    }
+}
+
+/* Content */
+h1.index-title {
+    min-width: 450px;
+    text-align: center;
+    color: #6A6B6C;
+    font-style: italic;
+}
+
+div.index-logo {
+    margin: 0;
+    margin-left:auto;
+    margin-right:auto;
+    width: 80%;
+
+    text-align: center;
+}
+
+div.content {
+    max-width: 35em;
+    margin-left: auto;
+    margin-right: auto;
+}

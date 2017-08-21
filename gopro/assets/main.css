@@ -1,0 +1,148 @@
+/* Custom Font */
+@font-face {
+    font-family: 'Neuropol'; /*a name to be used later*/
+    src: url('/neuropol/neuropol.ttf'); /*URL to font*/
+}
+
+html {
+    font-size: 22px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Banner */
+div.video-container {
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    min-height: 210px;
+}
+
+video.banner-video {
+    width: 100%;
+    left: 0;
+    padding:0;
+    margin:0;
+    min-height: 210px;
+    z-index: -1;
+}
+
+/* Header */
+div.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    min-height: 60px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+
+/* Navigation */
+nav {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 0;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    padding: 20px;
+    margin: 0;
+    font-family: 'Neuropol',Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+nav ul li a:hover {
+    color: #fff;
+    background-color: #029CE2;
+    padding: 30px;
+}
+
+/* Heading Box */
+div.heading-box {
+    position: absolute;
+    top: 320px;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    max-width: 25em;
+    border-radius: 1em;
+    background-color: rgba(0,0,0,0.85);
+    color: #fff;
+    text-align: center;
+}
+div.heading-box h1 {
+    font-weight: 600;
+}
+
+/* Contents */
+div.container {
+    position: relative;
+    max-width: 40em;
+    margin-left: auto;
+    margin-right: auto;
+    top: 380px;
+}
+
+div.centered-photo-container {
+    width: 100%;
+    text-align:center;
+}
+
+/* Footer */
+div.footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    top: 400px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+}
+
+/* Bottom Links */
+div.bottom-nav {
+    float: right;
+    max-width: 25em;
+    margin-top: 5px;
+    text-align: right;
+}
+div.bottom-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+div.bottom-nav ul li {
+    display: inline-block;
+    border-right: 1px dotted #fff;
+}
+div.bottom-nav ul li:last-of-type {
+    border-right: 0;
+}
+div.bottom-nav ul li a {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+div.bottom-nav ul li a:hover {
+    color: #029CE2;
+}

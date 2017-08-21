@@ -1,2 +1,2 @@
 # html-armoury
-HTML, CSS
+Stuff I learn about HTML, CSS
