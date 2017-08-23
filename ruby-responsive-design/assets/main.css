@@ -1,0 +1,82 @@
+h1 {
+    font-family: 'Lato', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+}
+
+article {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+figure {
+    text-align: center;
+    margin: 0;
+    border-bottom: 4px solid #AB1501;
+    padding-bottom: 20px;
+}
+.ruby-logo {
+    width: 99px;
+    height: auto;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px; 
+    line-height: 1.3888; /* 25px figma line height divided by 18px font size*/
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #AB1501;
+}
+
+
+@media (min-width: 768px) {
+    /* body {
+        background-color: skyblue;
+    } */
+}
+@media (min-width: 1024px) {
+    /* body {
+        background-color: pink;
+    } */
+    article {
+        max-width: 676px;
+    }
+
+    /* Grid */
+    .row::after { /* Best Practice */
+        content: "";
+        display: table;
+        clear: both;
+    }
+    /* .clearfix { 
+        clear: both;  --> Bad Practice
+    } */
+    .col-left {
+        float: left;
+        width: 502px;
+    }
+    .col-right {
+        width: 154px;
+        float: right;
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 44px;
+    }
+    .ruby-logo {
+        width: 154px;
+        float: right;
+    }
+    figure {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+}
