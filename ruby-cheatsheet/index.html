@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+    <head>
+        <style>
+            body {
+                padding: 1em;
+            }
+
+            pre {
+                background-color: #eee;
+            }
+        </style>
+    </head>
+    <body>
+
+            <h1>Ruby Cheatsheet</h1>
+            
+            <h2>Variables</h2>
+            
+            <h3>Creating a variable</h3>
+            <pre><code class="language-ruby">
+            name = value
+            
+            </code></pre>
+            
+            <h3>Changing a variable</h3>
+            <pre><code class="language-ruby">
+            money = 5
+            puts money
+            # => 5
+            
+            # other code that does stuff
+            
+            money = 9
+            puts money
+            # => 9
+            
+            </code></pre>
+            
+            
+            
+            
+            <h2>Strings</h2>
+            
+            <h3>Reverse a string</h3>
+            <pre><code class="language-ruby">
+            "hello".reverse
+            # => "olleh"
+            
+            </code></pre>
+            
+            <h3>Uppercase the letters of a string</h3>
+            <pre><code class="language-ruby">
+            "a".upcase
+            
+            </code></pre>
+            
+            <h3>Convert a string to an integer</h3>
+            <pre><code class="language-ruby">
+            "a".to_i
+            
+            </code></pre>
+            
+            <h3>Get user input, and convert it to an integer</h3>
+            <pre><code class="language-ruby">
+            input = gets.chomp.to_i
+            
+            </code></pre>
+            
+            <h3>Repeatedly ask for user input until they enter a number greater than 10</h3>
+            <pre><code class="language-ruby">
+            begin 
+                input = gets.chomp.to_i
+            end while input <= 10
+            
+            </code></pre>
+            
+            <h3>Display a menu with 3 options: Dogs, Cat, Lizards</h3>
+            <pre><code class="language-ruby">
+            puts "Dogs"
+            puts "Cat"
+            puts "Lizards"
+            
+            </code></pre>
+            
+            <h3>Ask user for their choice from the menu of: Dogs, Cat, Lizards, and display their choice as emoji 🐶 🐱 🦎</h3>
+            <pre><code class="language-ruby">
+            input = gets.chomp
+            case input
+            when "Dogs"
+                puts "🐶"
+            when "Cat"
+                puts "🐱"
+            when "Lizards"
+                puts "🦎"
+            end
+            
+            
+            </code></pre>
+            
+            
+            
+            <h2>Methods</h2>
+            
+            <h3>Defining a method called “add”</h3>
+            <pre><code class="language-ruby">
+            def add(num1, num2)
+                num1 + num2
+            end
+            
+            </code></pre>
+            
+            <h3>Using the method “add” to add two numbers</h3>
+            <pre><code class="language-ruby">
+            result = add(7, 5)
+            # => 12
+            
+            </code></pre>
+            
+            <h3>(Your example of methods)</h3>
+            <pre><code class="language-ruby">
+            def fire_laser(target)
+                if target == "Death Star"
+                    10.times do 
+                        puts "You hit the target!"
+                    end
+                end
+                puts "Target destroyed!!!"
+            end
+            
+            </code></pre>
+            
+            <!-- Continue here... -->
+            
+            
+            <h2>Classes &amp; Objects</h2>
+            
+            <h3>Define a Taxi class with rego number</h3>
+            <pre><code class="language-ruby">
+            class Taxi
+                def initialize(rego_number)
+                    @rego_number = rego_number
+                end
+            end
+            
+            </code></pre>
+            
+            <h3>Define a Taxi class with rego number <em>and driver</em></h3>
+            <pre><code class="language-ruby">
+            class Taxi
+                def initialize(rego_number, driver)
+                    @rego_number = rego_number
+                    @driver = driver
+                end
+            end
+            </code></pre>
+            
+            <h3>Make 3 instances of Taxi (3 Taxi objects)</h3>
+            <pre><code class="language-ruby">
+            taxi_1 = Taxi.new("AE4356", "Ruegen")
+            taxi_2 = Taxi.new("TY86Y7", "Patrick")
+            taxi_3 = Taxi.new("YT98T6", "Matt")
+            
+            </code></pre>
+            
+            <h3>Define a TaxiRide class with taxi, passenger name, origin, destination, distance</h3>
+            <pre><code class="language-ruby">
+            class TaxiRide
+                def initialize(taxi, passenger name, origin, destination, distance)
+                    @taxi = taxi
+                    @passenger_name = passenger_name
+                    @origin = origin
+                    @destination = destination
+                    @distance = distance
+                end
+            end
+            
+            </code></pre>
+            
+            <h3>Add method to your TaxiRide class to calculate fare based on distance. The cost per 1km is $1.40</h3>
+            <pre><code class="language-ruby">
+            class TaxiRide
+                def initialize(taxi, passenger name, origin, destination, distance)
+                    @taxi = taxi
+                    @passenger_name = passenger_name
+                    @origin = origin
+                    @destination = destination
+                    @distance = distance
+                end
+                
+                def calculate_fare(distance)
+                fare = distance * 1.40
+            end
+            
+            
+            </code></pre>
+            
+            <h3>(Your example of classes and objects)</h3>
+            <pre><code class="language-ruby">
+            class Baby
+            
+                attr_accessor :hungry, :happy, :smell, :poo_level, :cry_level
+                
+                def feed_baby
+                    @hungry = false
+                    @happy = true
+                    @poo_level = 50
+                    @cry_level = 0
+                end
+                def change_nappy
+                    @smell = false
+                    @happy = true
+                    @poo_level = 0
+                    @cry_level = 0
+                end	
+            end
+            
+            </code></pre>
+            
+            <!-- Continue here... -->
+
+    </body>
+</html>
