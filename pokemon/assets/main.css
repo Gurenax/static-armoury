@@ -29,6 +29,9 @@ h1.name {
     font-size: 36px;
     color: #F3DC80; 
 }
+h1.name::after {
+    content: '???';
+}
 
 div.logo {
     position: absolute;
@@ -47,42 +50,37 @@ figure {
     text-align: center;
     width: 100%;
     z-index: -1;
+
+    -ms-transform: rotate(0deg); /* IE 9 */
+    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+    transform: rotate(0deg);
+
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    
+    -moz-animation-name: spin;
+    -moz-animation-duration: 500ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    
+    -ms-animation-name: spin;
+    -ms-animation-duration: 500ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
 img.pokemon {
     width: 400px;
     height: auto;
     z-index: -1;
 }
-@media (min-width: 0px) {
-    figure {
-        -ms-transform: rotate(0deg); /* IE 9 */
-        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-        transform: rotate(0deg);
 
-        -webkit-animation-name: spin;
-        -webkit-animation-duration: 500ms;
-        -webkit-animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-        
-        -moz-animation-name: spin;
-        -moz-animation-duration: 500ms;
-        -moz-animation-iteration-count: infinite;
-        -moz-animation-timing-function: linear;
-        
-        -ms-animation-name: spin;
-        -ms-animation-duration: 500ms;
-        -ms-animation-iteration-count: infinite;
-        -ms-animation-timing-function: linear;
-        
-        animation-name: spin;
-        animation-duration: 500ms;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-    }
-    h1.name::after {
-        content: '???';
-    }
-}
 @media (min-width: 500px) {
     figure {
         top:150px;
@@ -102,21 +100,14 @@ img.pokemon {
         content: 'CHARMANDER';
     }
 }
+
 @media (min-width: 768px) {
     figure {
         top:90px;
-        -ms-transform: rotate(0deg); /* IE 9 */
-        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-        transform: rotate(0deg);
-        
-        -ms-animation: 0;
-        -webkit-animation: 0;
-        animation: 0;
     }
     img.pokemon {
         content:url('/assets/charmeleon.png');
         width: 500px;
-        overflow: none;
     }
     img.pokemon-logo {
         width: 300px;
@@ -127,20 +118,9 @@ img.pokemon {
 }
 
 @media (min-width: 1024px) {
-    figure {
-        -ms-transform: rotate(0deg); /* IE 9 */
-        -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-        transform: rotate(0deg);
-        
-        -ms-animation: 0;
-        -webkit-animation: 0;
-        animation: 0;
-    }
     img.pokemon {
         content:url('/assets/charizard.png');
         width: 800px;
-        height: auto;
-        overflow: none;
     }
     img.pokemon-logo {
         width: 320px;
